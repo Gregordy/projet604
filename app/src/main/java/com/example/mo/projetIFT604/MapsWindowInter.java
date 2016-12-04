@@ -49,14 +49,12 @@ class MapsWindowInter implements InfoWindowAdapter{
 
         LatLng latLng = marker.getPosition();
 
-
-
         TextView tvParticipants = ((TextView)myContentsView.findViewById(R.id.participants_number));
         tvParticipants.setText("Participants à récupérer via script");
         TextView tvEquipments = ((TextView)myContentsView.findViewById(R.id.equipments));
-        tvEquipments.setText("Equipements à déterminer via script");
+        tvEquipments.setText("Équipements à déterminer via script");
         TextView tvGps = ((TextView)myContentsView.findViewById(R.id.gps_coordonate));
-        tvGps.setText("Coordonnée GPS: "+latLng.latitude+","+latLng.longitude);
+        tvGps.setText("Coordonnées GPS: "+latLng.latitude+","+latLng.longitude);
         TextView tvAddress = ((TextView)myContentsView.findViewById(R.id.address));
         tvAddress.setText("Addresse à récupérer via script ");
 

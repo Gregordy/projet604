@@ -92,7 +92,7 @@ public class parametre_utilisateur extends AppCompatActivity {
                         }
                     }
                 }, mYear, mMonth, mDay);
-                mDatePicker.setTitle("Select Date");
+                mDatePicker.setTitle("Choisissez une Date");
                 mDatePicker.show();
             }
         });
@@ -128,11 +128,11 @@ public class parametre_utilisateur extends AppCompatActivity {
                 String password = ((EditText) findViewById(R.id.password_p)).getText().toString();
 
                 String password_confirm = ((EditText) findViewById(R.id.password2_p)).getText().toString();
-                Boolean password_modifie = false; // savoir si le mot de pass a été modifié ou pas
+                Boolean password_modifie = false; // savoir si le mot de passe a été modifié ou pas
 
                 if (!password.equals("") && !password_confirm.equals("")) {
                     if (!password.equals(password_confirm)) {
-                        ((EditText) findViewById(R.id.password2_p)).setError("Les mots de passes ne sont pas identiques");
+                        ((EditText) findViewById(R.id.password2_p)).setError("Les mots de passe ne sont pas identiques");
                         return;
                     } else if (password.equals(password_confirm)) {
                         if (password.length() <= 4) {
@@ -165,9 +165,6 @@ public class parametre_utilisateur extends AppCompatActivity {
                     ((CheckBox) findViewById(R.id.female_p)).setError("Un seul choix possible");
                     return;
                 }
-
-
-                System.out.println("\n\n\n\n Valeur de val et va " +val + " "+ va+"\n\n\n\n");
                 requeteHttp_modifie = new PostClass();
 
                 if (password_modifie) {
@@ -212,7 +209,7 @@ public class parametre_utilisateur extends AppCompatActivity {
     private class PostClass extends AsyncTask<String, Void, HashMap> {
 
 
-        @Override//Cette méthode s'execute en deuxième
+        @Override//Cette méthode s'exécute en deuxième
         protected HashMap doInBackground(String... params) {
 
             ConnectivityManager check = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
@@ -254,7 +251,7 @@ public class parametre_utilisateur extends AppCompatActivity {
 
                             Reader reader = new InputStreamReader(connection.getInputStream(), "UTF-8");
                             char[] buffer = new char[1024];
-                            reader.read(buffer);  /// On recupere ce que nous a envoyés le fichier php
+                            reader.read(buffer);  /// On récupère ce que nous a envoyé le fichier php
                             result = new String(buffer);
                             reader.close();
 
@@ -286,7 +283,7 @@ public class parametre_utilisateur extends AppCompatActivity {
 
                             }
 
-                            ///////////////// Code permettant de vérifier la connexion avecle server////////////////
+                            ///////////////// Code permettant de vérifier la connexion avec le serveur////////////////
                   /*      if (connection.getResponseCode() == 200) {
                             return   String.valueOf(connection.getResponseCode()) + " "+ connection.getResponseMessage();
                         }
@@ -328,23 +325,19 @@ public class parametre_utilisateur extends AppCompatActivity {
 
                             Reader reader = new InputStreamReader(connection.getInputStream(), "UTF-8");
                             char[] buffer = new char[1024];
-                            reader.read(buffer);  /// On recupere ce que nous a envoyés le fichier php
+                            reader.read(buffer);  /// On récupère ce que nous a envoyé le fichier php
                             result = new String(buffer);
                             reader.close();
 
 
                             //////////////////////JSON////////////////////////////////////
                             try {
-
-
                                 JSONObject jObject = new JSONObject(result);
 
 
                                 HashMap parametresUtilisateur = new HashMap();
                                 parametresUtilisateur.put("OBJET", UPDATE);
                                 parametresUtilisateur.put("value", jObject.getString("value"));
-
-
 
                                 connection.disconnect();
 
@@ -383,8 +376,8 @@ public class parametre_utilisateur extends AppCompatActivity {
 
         }
 
-        @Override // La troisème méthode qui s'execute en dernier
-        // String th, est la valeur que nous a retournee doInBackground
+        @Override // La troisème méthode qui s'exécute en dernier
+        // String th, est la valeur que nous a retourné doInBackground
         protected void onPostExecute(HashMap th) {
 
             if (th != null) {
@@ -472,7 +465,7 @@ public class parametre_utilisateur extends AppCompatActivity {
                     }
                     else
                     {
-                        Toast.makeText(getBaseContext(), "Echec de la mise à jour  !", Toast.LENGTH_LONG).show();
+                        Toast.makeText(getBaseContext(), "Échec de la mise à jour  !", Toast.LENGTH_LONG).show();
                     }
                     requeteHttp_modifie.cancel(true);
                 }

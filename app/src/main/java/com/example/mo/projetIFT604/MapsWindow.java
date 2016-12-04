@@ -7,7 +7,7 @@ import android.widget.TextView;
 import com.google.android.gms.maps.GoogleMap.InfoWindowAdapter;
 import com.google.android.gms.maps.model.Marker;
 /**
- * PAS ENCORE UTILISER
+ * PAS ENCORE UTILISÉ
  */
 public class MapsWindow implements InfoWindowAdapter {
     LayoutInflater inflater = null;

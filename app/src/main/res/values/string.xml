@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">projetIFT604</string>
+    <string name="action_settings">Options</string>
+    <string name="title_activity_creation">Création</string>
+    <!-- Liste des sports-->
+    <string name="Football">Football</string>
+    <string name="Rugby">Rugby</string>
+    <string name="Basketball">Basketball</string>
+    <string name="Tennis">Tennis</string>
+    <string name="Badminton">Badminton</string>
+    <string name="Volley_ball">Volley-ball</string>
+    <string name="Handball">Handball</string>
+    <string name="Course">Course à pied</string>
+    <string name="Cyclisme">Cyclisme</string>
+    <!-- fin Liste des sports-->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Mot de passe (optionel)</string>
+    <string name="action_sign_in">Se Connecter ou s\'Inscrire</string>
+    <string name="action_sign_in_short">Connexion</string>
+    <string name="error_invalid_email">Cette adresse mail n\'est pas valide</string>
+    <string name="error_invalid_password">Ce mot de passe est trop court</string>
+    <string name="error_incorrect_password">Le mot de passe est incorrect</string>
+    <string name="error_field_required">Ce champ est obligatoire</string>
+    <string name="permission_rationale">"La permission d'accéder aux contacts est requises pour l'auto-complétion d'adresses mails."
+    </string>
+    <string name="social">Se connecter en tant que</string>
+    <string name="title_activity_profil">Profil</string>
+    <string name="title_activity_parametre_utilisateur">parametre_utilisateur</string>
+    <string name="title_activity_login">Pseudo</string>
+    <string name="title_activity_signup">Connexion</string>
+    <string name="title_activity_maps">Carte</string>
+    <string name="info_window_participants">Participants</string>
+    <string name="info_window_equipments">Besoin d\'équipement</string>
+    <string name="info_window_gps">Coordonnées GPS</string>
+    <string name="info_window_address">Adresse à récupérer via script</string>
+    <string name="info_window_participantsNumber">Nombre de participants à récupérer</string>
+    <string name="info_window_equipmentsInfo">Equipement à récupérer</string>
+    <string name="info_window_gpsCoordonate">Coordonnées</string>
+</resources>

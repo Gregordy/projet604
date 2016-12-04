@@ -71,7 +71,7 @@ import java.util.TimerTask;
 public class MapsActivityCreation extends FragmentActivity implements OnMapReadyCallback, OnInfoWindowClickListener, LocationListener,OnMarkerClickListener {
     private SportFieldGroup userFields = new SportFieldGroup();
     private SportField markerField = new SportField();
-    //mettre en place en methode pour récupérer tous les évenements en bdd ici
+    //Mettre en place une méthode pour récupérer tous les événements en bdd ici
 
     private GoogleMap mMap;
 
@@ -257,10 +257,10 @@ public class MapsActivityCreation extends FragmentActivity implements OnMapReady
     private class PostClassCreate extends AsyncTask<SportFieldGroup, SportFieldGroup, SportFieldGroup> {
         final ProgressDialog progressDialog = new ProgressDialog(MapsActivityCreation.this, R.style.AppTheme_Dark_Dialog);
         SportFieldGroup myFields;
-        @Override //Cette méthode s'execute en premier, elle ouvre une simple boite de dialogue
+        @Override //Cette méthode s'exécute en premier, elle ouvre une simple boîte de dialogue
         protected void onPreExecute() {
             progressDialog.setIndeterminate(true);
-            progressDialog.setMessage("Loading...");
+            progressDialog.setMessage("Chargement...");
             progressDialog.show();
         }
 
@@ -274,8 +274,6 @@ public class MapsActivityCreation extends FragmentActivity implements OnMapReady
                     SportFieldGroup testField = new SportFieldGroup();
                     String result;
                     try {
-
-
                         URL url = new URL("http://humanapp.assos.efrei.fr/shareyoursport/script/shareyoursportcontroller.php");
                         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
                         connection.setConnectTimeout(3000);
@@ -283,7 +281,7 @@ public class MapsActivityCreation extends FragmentActivity implements OnMapReady
                         connection.setDoInput(true);
                         connection.setDoOutput(true);
 
-                        /// Mise en place des differents parametre necessaire ////
+                        /// Mise en place des différents paramètres nécessaires ////
 
                         Uri.Builder builder = new Uri.Builder()
                                 .appendQueryParameter("OBJET", "tousTerrain");
@@ -311,15 +309,10 @@ public class MapsActivityCreation extends FragmentActivity implements OnMapReady
 
 
                         try{
-
-
-
-
-
                         // On récupère le JSON complet
                         JSONObject jsonObject = new JSONObject(result);
                         System.out.println(jsonObject.toString());
-                        // On récupère le tableau d'objets qui nous concernent
+                        // On récupère le tableau d'objets qui nous concerne
                             JSONArray array = jsonObject.getJSONArray("terrain");
                        //JSONArray array = new JSONArray(jsonObject.getString("terrain"));
 
@@ -341,15 +334,11 @@ public class MapsActivityCreation extends FragmentActivity implements OnMapReady
                             sports.setCoord(coordInter);
                             // On ajoute la personne à la liste
                             myFields.addSports(sports);
-
-
-
                         }
 
 
                     } catch (JSONException e) {
                         Log.e("log_tag", "Error parsing data " + e.toString());
-
                     }
                     }
                     catch (MalformedURLException e) {
@@ -361,20 +350,17 @@ public class MapsActivityCreation extends FragmentActivity implements OnMapReady
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
-
                 }
             }
-
             return myFields;
         }
 
         protected void onPostExecute(SportFieldGroup th) {
             progressDialog.dismiss();
             SportField intermUserField;
-            Toast.makeText(getBaseContext(), "The Job is done", Toast.LENGTH_LONG).show();
+            Toast.makeText(getBaseContext(), "Le lieu a été ajouté", Toast.LENGTH_LONG).show();
             Iterator<SportField> it = th.iterator();
             while (it.hasNext()) {
-
                 intermUserField = it.next();
 
                 addMarker(mMap, intermUserField.getCoord().latitude, intermUserField.getCoord().longitude, intermUserField.getName());

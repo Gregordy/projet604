@@ -20,7 +20,7 @@ public class Interface extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_interface);
 
-        // Pas encore implémentée
+        // Pas encore implémenté
         ImageView event = (ImageView) findViewById(R.id.event);
         ImageView imageView5 = (ImageView) findViewById(R.id.imageView5);
         event.setVisibility(View.INVISIBLE);

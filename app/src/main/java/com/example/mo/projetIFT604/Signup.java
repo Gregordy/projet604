@@ -76,27 +76,27 @@ public class Signup extends AppCompatActivity {
         String password = _passwordText.getText().toString();
 
         if (name.isEmpty() || name.length() < 3) {
-            _nameText.setError("at least 3 characters");
+            _nameText.setError("au moins 3 caractères");
            return;
         } else {
             _nameText.setError(null);
         }
 
         if (email.isEmpty() || !android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-            _emailText.setError("enter a valid email address");
+            _emailText.setError("Entrez une adresse mail valide");
             return;
         } else {
             _emailText.setError(null);
         }
 
         if (password.isEmpty() || password.length() < 4 || password.length() > 10) {
-            _passwordText.setError("between 4 and 10 alphanumeric characters");
+            _passwordText.setError("Le mot de passe doit contenir entre 4 et 10 caractères alphanumériques");
             return;
         } else {
             _passwordText.setError(null);
         }
 
-        // Envoie de la requête http avec la method post à la base de données
+        // Envoie de la requête http avec la méthode post à la base de données
         PostClass requeteHttp = new PostClass();
         requeteHttp.execute(name,email, password);
 
@@ -106,14 +106,14 @@ public class Signup extends AppCompatActivity {
 
         final ProgressDialog progressDialog = new ProgressDialog(Signup.this, R.style.AppTheme_Dark_Dialog);
 
-        @Override //Cette méthode s'execute en premier, elle ouvre une simple boite de dialogue
+        @Override //Cette méthode s'exécute en premier, elle ouvre une simple boite de dialogue
         protected void onPreExecute() {
             progressDialog.setIndeterminate(true);
-            progressDialog.setMessage("Authenticating...");
+            progressDialog.setMessage("Authentification...");
             progressDialog.show();
         }
 
-        @Override//Cette méthode s'execute en deuxième
+        @Override//Cette méthode s'exécute en deuxième
         protected String doInBackground(String... params) {
 
             ConnectivityManager check = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
@@ -131,7 +131,7 @@ public class Signup extends AppCompatActivity {
                         connection.setDoInput(true);
                         connection.setDoOutput(true);
 
-                        /// Mise en place des differents parametre necessaire ////
+                        /// Mise en place des différents paramètres nécessaires ////
 
                         Uri.Builder builder = new Uri.Builder()
                                 .appendQueryParameter("OBJET", "Signup")
@@ -154,7 +154,7 @@ public class Signup extends AppCompatActivity {
 
                         Reader reader =new InputStreamReader(connection.getInputStream(), "UTF-8");
                         char[] buffer = new char[50];
-                        reader.read(buffer);  /// On recupere ce que nous a envoyés le fichier php
+                        reader.read(buffer);  /// On recupère ce que nous a envoyé le fichier php
                         result = new String(buffer);
                         reader.close();
 
@@ -175,7 +175,7 @@ public class Signup extends AppCompatActivity {
 
                         }
 
-                        ///////////////// Code permettant de vérifier la connexion avec le server////////////////
+                        ///////////////// Code permettant de vérifier la connexion avec le serveur////////////////
                   /*      if (connection.getResponseCode() == 200) {
                             return   String.valueOf(connection.getResponseCode()) + " "+ connection.getResponseMessage();
                         }
@@ -198,8 +198,8 @@ public class Signup extends AppCompatActivity {
 
         }
 
-        @Override // La troisème méthode qui s'execute en dernier
-        // String th, est la valeur que nous a retournee doInBackground
+        @Override // La troisème méthode qui s'exécute en dernier
+        // String th, est la valeur que nous a retourné doInBackground
         protected void onPostExecute(String th) {
             progressDialog.dismiss();
 
@@ -217,8 +217,4 @@ public class Signup extends AppCompatActivity {
         }
 
     }
-
-
-
-
 }

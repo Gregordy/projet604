@@ -100,14 +100,6 @@
                 android:background="@drawable/google_plus"
 
                 />
-
-
-
-
-
-
         </LinearLayout>
-
-
     </LinearLayout>
 </ScrollView>

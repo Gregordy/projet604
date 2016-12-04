@@ -10,7 +10,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:background="@color/purple"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.example.mo.projetIFT604.com.example.mo.projetIFT604.parametre_utilisateur"
+    tools:context="com.example.mo.projetIFT604.parametre_utilisateur"
     tools:showIn="@layout/activity_parametre_utilisateur">
 
 
@@ -88,7 +88,7 @@
                     android:layout_below="@+id/editText5"
                     android:layout_alignEnd="@+id/editText5"
                     android:gravity="center"
-                    android:hint="Firstname" />
+                    android:hint="Prénom" />
             </LinearLayout>
 
             <LinearLayout
@@ -108,7 +108,7 @@
                     android:layout_below="@+id/firstname_p"
                     android:layout_alignEnd="@+id/firstname_p"
                     android:gravity="center"
-                    android:hint="Lastname" />
+                    android:hint="Nom de Famille" />
             </LinearLayout>
 
             <LinearLayout
@@ -128,7 +128,7 @@
                     android:textColor="#ffffff"
                     android:layout_below="@+id/password2_p"
                     android:layout_centerHorizontal="true"
-                    android:hint="adresse email" />
+                    android:hint="adresse mail" />
             </LinearLayout>
 
             <LinearLayout
@@ -251,7 +251,7 @@
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Male"
+                    android:text="Homme"
                     android:id="@+id/male_p"
                     android:layout_alignBottom="@+id/datePicker"
                     android:layout_alignStart="@+id/datePicker"
@@ -261,7 +261,7 @@
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Female"
+                    android:text="Femme"
                     android:id="@+id/female_p"
                     android:checked="false"
                     android:layout_alignTop="@+id/male_p"

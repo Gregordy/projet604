@@ -182,7 +182,7 @@ public class Creation extends AppCompatActivity {
 
                     }
                 }, hour, minute, true);//Yes 24 hour time
-                mTimePicker.setTitle("Select Time");
+                mTimePicker.setTitle("Choisissez l'heure");
                 mTimePicker.show();
 
             }
@@ -220,7 +220,7 @@ public class Creation extends AppCompatActivity {
 
                     }
                 }, hour, minute, true);//Yes 24 hour time
-                mTimePicker.setTitle("Select Time");
+                mTimePicker.setTitle("Choisissez l'heure");
                 mTimePicker.show();
 
             }
@@ -263,7 +263,7 @@ public class Creation extends AppCompatActivity {
                         }
                     }
                 }, mYear, mMonth, mDay);
-                mDatePicker.setTitle("Select Date");
+                mDatePicker.setTitle("Choisissez la Date");
                 mDatePicker.show();
             }
         });
@@ -368,14 +368,14 @@ public class Creation extends AppCompatActivity {
         }
 
         if (heuredebut.isEmpty() || heuredebut.equals("Heure de debut")) {
-            ((Button) findViewById(R.id.heuredebut)).setError("Choisissez l'heure du début ");
+            ((Button) findViewById(R.id.heuredebut)).setError("Choisissez l'heure de début ");
             return;
         } else {
             ((Button) findViewById(R.id.heuredebut)).setError(null);
         }
 
         if (heurefin.isEmpty() || heurefin.equals("Heure de fin")) {
-            ((Button) findViewById(R.id.heurefin)).setError("Choisissez l'heure du début ");
+            ((Button) findViewById(R.id.heurefin)).setError("Choisissez l'heure de fin ");
             return;
         } else {
             ((Button) findViewById(R.id.heurefin)).setError(null);
@@ -433,7 +433,7 @@ public class Creation extends AppCompatActivity {
         @Override //Cette méthode s'execute en premier, elle ouvre une simple boite de dialogue
         protected void onPreExecute() {
             progressDialog.setIndeterminate(true);
-            progressDialog.setMessage("Authenticating...");
+            progressDialog.setMessage("Authentification...");
             progressDialog.show();
         }
 

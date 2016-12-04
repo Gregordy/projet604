@@ -5,7 +5,7 @@ import com.google.android.gms.maps.model.LatLng;
 import java.util.Date;
 
 /**
- * CLASS REPRESENTANT UN EVENEMENT
+ * CLASSE REPRÉSENTANT UN ÉVÉNEMENT
  */
 public class SportField {
     private int id;

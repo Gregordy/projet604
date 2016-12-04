@@ -5,7 +5,7 @@ import com.google.android.gms.maps.model.LatLng;
 import java.util.Date;
 
 /**
- * CLASS REPRESENTANT UN EVENEMENT
+ * CLASSE REPRÉSENTANT UN ÉVÉNEMENT
  */
 public class SportEvent {
     private int id;
@@ -127,7 +127,7 @@ public class SportEvent {
             this.playerIn++;
         }
         else{
-            System.out.println("Evenement remplis");
+            System.out.println("Événement complété");
         }
         return playerIn;
     }

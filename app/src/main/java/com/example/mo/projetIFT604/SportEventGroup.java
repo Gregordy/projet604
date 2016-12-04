@@ -6,7 +6,7 @@ import java.util.Iterator;
 import java.util.Vector;
 
 /**
- * CLASSE SUPPOSEE CONTENIR TOUS LES EVENEMENTS
+ * CLASSE SUPPOSÉE CONTENIR TOUS LES ÉVÉNEMENTS
  *
  */
 public class SportEventGroup implements Iterable<SportEvent>{

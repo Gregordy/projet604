@@ -64,7 +64,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private SportEventGroup userEvents = new SportEventGroup();
 
 
-    //mettre en place en methode pour récupérer tous les évenements en bdd ici
+    //Mettre en place une méthode pour récupérer tous les évenements en bdd ici
     private MyTimerTask taskService;
 
     private GoogleMap mMap;
@@ -84,7 +84,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
-        //Utilisé pour récupérer la position de l'utilisateur
+        //Utiliser pour récupérer la position de l'utilisateur
         locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
 
@@ -164,19 +164,19 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
                 SportEvent markerEvent = userEvents.findSportByCoord(latLng);
 
-                //AJOUTER SANS TEST
+                //AJOUTÉ SANS TEST
                 TextView tvSports = ((TextView)v.findViewById(R.id.sport_practice));
                 tvSports.setText(markerEvent.getTypeSport());
-                //AJOUTER SANS TEST
+                //AJOUTÉ SANS TEST
 
                 TextView tvParticipants = ((TextView)v.findViewById(R.id.participants_number));
                 tvParticipants.setText(markerEvent.getPlayerIn()+"/"+markerEvent.getPlayersNeeded());
 
                 TextView tvEquipments = ((TextView)v.findViewById(R.id.equipments));
-                tvEquipments.setText("Equipements à déterminer via script");
+                tvEquipments.setText("Équipements à déterminer via script");
 
                 TextView tvGps = ((TextView)v.findViewById(R.id.gps_coordonate));
-                tvGps.setText("Coordonnée GPS: "+latLng.latitude+","+latLng.longitude);
+                tvGps.setText("Coordonnées GPS: "+latLng.latitude+","+latLng.longitude);
 
                 TextView tvName = ((TextView)v.findViewById(R.id.localName));
                 tvName.setText(markerEvent.getName());
@@ -187,7 +187,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 TextView tvCity = ((TextView)v.findViewById(R.id.city));
                 tvCity.setText(markerEvent.getCity());
 
-                /*à mettre en place quand la récuération de la date et heure se fera au bon format
+                /*À mettre en place quand la récupération de la date et heure se fera au bon format
                 TextView tvHour = ((TextView)v.findViewById(R.id.hour));
                 tvHour.setText(markerEvent.getHour());*/
 
@@ -217,7 +217,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
 
-    //Methode utilisée pour créer un marker avec les informations d'un objet SportEvent
+    //Méthode utilisée pour créer un marqueur avec les informations d'un objet SportEvent
     private void addMarker(GoogleMap map,String idEvent, double lat, double lon) {
         map.addMarker(new MarkerOptions().title(new String(idEvent)).position(new LatLng(lat, lon)).icon(BitmapDescriptorFactory.fromResource(R.drawable.marker)));
     }
@@ -232,7 +232,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
 
-    //Les 3 méthodes qui suivent sont "redéfinis" pour permettre d'"implements" LocationListener
+    //Les 3 méthodes qui suivent sont "redéfinies" pour permettre d'implémenter LocationListener
     @Override
     public void onStatusChanged(String provider, int status, Bundle extras) {
     }
@@ -252,10 +252,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         SportEventGroup myEvents;
 
 
-        @Override //Cette méthode s'execute en premier, elle ouvre une simple boite de dialogue
+        @Override //Cette méthode s'exécute en premier, elle ouvre une simple boîte de dialogue
         protected void onPreExecute() {
             progressDialog.setIndeterminate(true);
-            progressDialog.setMessage("Loading...");
+            progressDialog.setMessage("Chargement...");
             progressDialog.show();
         }
 
@@ -278,7 +278,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         connection.setDoInput(true);
                         connection.setDoOutput(true);
 
-                        /// Mise en place des differents parametre necessaire ////
+                        /// Mise en place des différents paramètres nécessaires ////
 
                         Uri.Builder builder = new Uri.Builder()
                                 .appendQueryParameter("OBJET", "tousEvent");
@@ -305,16 +305,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
 
                         try{
-
-
-
-
-
-
                             // On récupère le JSON complet
                             JSONObject jsonObject = new JSONObject(result);
                             System.out.println(jsonObject.toString());
-                            // On récupère le tableau d'objets qui nous concernent
+                            // On récupère le tableau d'objets qui nous concerne
                             JSONArray array = jsonObject.getJSONArray("evenement");
                             //JSONArray array = new JSONArray(jsonObject.getString("terrain"));
 
@@ -322,8 +316,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                             LatLng coordInter;
                             // Pour tous les objets on récupère les infos
                             for (int j = 0; j < array.length(); j++) {
-
-
                                 // On récupère un objet JSON du tableau
                                 //JSONObject obj = array.getJSONObject(j);
                                 JSONObject obj = new JSONObject(array.getString(j));
@@ -342,9 +334,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                                 events.setTypeSport(obj.getString("typeSport"));
                                 // On ajoute la personne à la liste
                                 myEvents.addSports(events);
-
-
-
                             }
 
 
@@ -372,7 +361,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         protected void onPostExecute(SportEventGroup th) {
             progressDialog.dismiss();
             SportEvent intermUserEvent;
-            Toast.makeText(getBaseContext(), "The Job is done", Toast.LENGTH_LONG).show();
+            Toast.makeText(getBaseContext(), "Lieu sélectionné", Toast.LENGTH_LONG).show();
             Iterator<SportEvent> it = th.iterator();
             while (it.hasNext()) {
 
@@ -395,10 +384,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         String idUser = sharedpreferences.getString("id", "");
 
 
-        @Override //Cette méthode s'execute en premier, elle ouvre une simple boite de dialogue
+        @Override //Cette méthode s'exécute en premier, elle ouvre une simple boîte de dialogue
         protected void onPreExecute() {
             progressDialog.setIndeterminate(true);
-            progressDialog.setMessage("Loading...");
+            progressDialog.setMessage("Chargement...");
             progressDialog.show();
         }
 
@@ -414,22 +403,17 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
                     String result;
                     try {
-
-
-
                         URL url = new URL("http://humanapp.assos.efrei.fr/shareyoursport/script/shareyoursportcontroller.php");
                         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
                         connection.setConnectTimeout(3000);
                         connection.setRequestMethod("POST");
                         connection.setDoInput(true);
                         connection.setDoOutput(true);
-
                         /// Mise en place des differents parametre necessaire ////
                         Uri.Builder builder = new Uri.Builder()
                                 .appendQueryParameter("OBJET", "joinEvent")
                                 .appendQueryParameter("ID_Event", eventToJoin)
                                 .appendQueryParameter("ID_User", idUser);
-
 
                         String query = builder.build().getEncodedQuery();
 
@@ -483,12 +467,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             progressDialog.dismiss();
             SportEvent intermUserEvent;
             if(th.equals("true")){
-                Toast.makeText(getBaseContext(), "Evenement Rejoins", Toast.LENGTH_LONG).show();
+                Toast.makeText(getBaseContext(), "Événement rejoint", Toast.LENGTH_LONG).show();
                 Intent myIntent = new Intent(MapsActivity.this, Interface.class);
                 startActivity(myIntent);
             }
             else{
-                Toast.makeText(getBaseContext(), "Evenement impossible à rejoindre", Toast.LENGTH_LONG).show();
+                Toast.makeText(getBaseContext(), "Événement impossible à rejoindre", Toast.LENGTH_LONG).show();
             }
 
 

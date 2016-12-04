@@ -90,7 +90,6 @@ public class EvenementService extends IntentService {
 
                         Reader reader = new InputStreamReader(connection.getInputStream(), "UTF-8");
                         char[] buffer = new char[50];
-                        System.out.println("\n\n\n\n\n\n\n\n\n\n\n CHAAAAR : "+buffer +"\n\n\n\n\n ");
                         reader.read(buffer);  /// On recupere ce que nous a envoyés le fichier php
                         result = new String(buffer);
                         reader.close();
@@ -150,7 +149,7 @@ public class EvenementService extends IntentService {
                             new NotificationCompat.Builder((Context)context)
                                     .setSmallIcon(R.drawable.common_plus_signin_btn_icon_dark)
                                     .setContentTitle("IFT604Projet")
-                                    .setContentText("Un nouvel évènement a été crée " );
+                                    .setContentText("Un nouvel événement a été créé " );
 
                     NotificationManager mNotificationManager =
                             (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
