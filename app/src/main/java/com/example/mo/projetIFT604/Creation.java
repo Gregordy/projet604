@@ -342,7 +342,7 @@ public class Creation extends AppCompatActivity {
         }
 
 
-        /*if (lieuPratique==null) {
+        if (lieuPratique==null) {
             ((EditText) findViewById(R.id.editText)).setError("Choisissez un lieu");
             return;
         }
@@ -351,10 +351,10 @@ public class Creation extends AppCompatActivity {
             if (lieuPratique.isEmpty() || lieuPratique.equals("Votre lieu de pratique")) {
                 ((EditText) findViewById(R.id.editText)).setError("Choisissez un lieu");
                 return;
-            } else {*/
+            } else {
                 ((EditText) findViewById(R.id.editText)).setError(null);
-        /*    }
-        }*/
+            }
+        }
 
 
 
