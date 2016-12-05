@@ -55,6 +55,8 @@ public class Creation extends AppCompatActivity {
     private String cityField = null;
     private  String adressField = null;
 
+    EditText _dateText;
+
      @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -173,7 +175,7 @@ public class Creation extends AppCompatActivity {
 
                         else if(selectedHour>=10 && selectedMinute<10)
                         {
-                            heuredebut.setText(selectedHour + "h" + selectedMinute);
+                            heuredebut.setText(selectedHour + "h0" + selectedMinute);
                         }
                         else if(selectedHour>=10 && selectedMinute>=10)
                         {
@@ -211,7 +213,7 @@ public class Creation extends AppCompatActivity {
 
                         else if(selectedHour>=10 && selectedMinute<10)
                         {
-                            heurefin.setText(selectedHour + "h" + selectedMinute);
+                            heurefin.setText(selectedHour + "h0" + selectedMinute);
                         }
                         else if(selectedHour>=10 && selectedMinute>=10)
                         {
@@ -238,31 +240,23 @@ public class Creation extends AppCompatActivity {
                 int mDay = mcurrentDate.get(Calendar.DAY_OF_MONTH);
 
                 DatePickerDialog mDatePicker;
-                mDatePicker = new DatePickerDialog(Creation.this, new DatePickerDialog.OnDateSetListener() {
-                    public void onDateSet(DatePicker datepicker, int selectedyear, int selectedmonth, int selectedday) {
-                        // TODO Auto-generated method stub
+                    mDatePicker = new DatePickerDialog(Creation.this, new DatePickerDialog.OnDateSetListener() {
+                        public void onDateSet(DatePicker datepicker, int selectedyear, int selectedmonth, int selectedday) {
+                            // TODO Auto-generated method stub
                     /*      Your code   to get date and time    */
-                        selectedmonth = selectedmonth + 1;
+                            selectedmonth = selectedmonth + 1;
 
-                        if(selectedday<10 && selectedmonth<10)
-                        {
-                            dateevenement.setText("0" + selectedday + "/0" + selectedmonth + "/" + selectedyear);
+                            if (selectedday < 10 && selectedmonth < 10) {
+                                dateevenement.setText("0" + selectedday + "/0" + selectedmonth + "/" + selectedyear);
+                            } else if (selectedday < 10 && selectedmonth >= 10) {
+                                dateevenement.setText("0" + selectedday + "/" + selectedmonth + "/" + selectedyear);
+                            } else if (selectedday >= 10 && selectedmonth < 10) {
+                                dateevenement.setText("" + selectedday + "/0" + selectedmonth + "/" + selectedyear);
+                            } else if (selectedday >= 10 && selectedmonth >= 10) {
+                                dateevenement.setText("" + selectedday + "/" + selectedmonth + "/" + selectedyear);
+                            }
                         }
-                        else if(selectedday<10 && selectedmonth>=10)
-                        {
-                            dateevenement.setText("0" + selectedday + "/" + selectedmonth + "/" + selectedyear);
-                        }
-
-                        else if(selectedday>=10 && selectedmonth<10)
-                        {
-                            dateevenement.setText("" + selectedday + "/0" + selectedmonth + "/" + selectedyear);
-                        }
-                        else if(selectedday>=10 && selectedmonth>=10)
-                        {
-                            dateevenement.setText("" + selectedday + "/" + selectedmonth + "/" + selectedyear);
-                        }
-                    }
-                }, mYear, mMonth, mDay);
+                    }, mYear, mMonth, mDay);
                 mDatePicker.setTitle("Choisissez la Date");
                 mDatePicker.show();
             }
@@ -321,10 +315,14 @@ public class Creation extends AppCompatActivity {
         String latitude=Double.toString(_latField);
         String longitude=Double.toString(_longField);
         String date=((Button) findViewById(R.id.dateevenement)).getText().toString();
-        String heuredebut=((Button) findViewById(R.id.heuredebut)).getText().toString();
-        String heurefin= ((Button) findViewById(R.id.heurefin)).getText().toString();
-        String nbrpersonne=((EditText) findViewById(R.id.nombrepersonne)).getText().toString();;
+        String heuredebut=((Button) findViewById(R.id.heuredebut)).getText().toString().substring(0,5);
+        String heurefin= ((Button) findViewById(R.id.heurefin)).getText().toString().substring(0,5);
+        String nbrpersonne=((EditText) findViewById(R.id.nombrepersonne)).getText().toString();
         String checkbox;
+        String[] dateExplode = date.split("/");
+        String[] heureDebutExplode = heuredebut.split("h");
+        String[] heureFinExplode = heurefin.split("h");
+
        if(((CheckBox) findViewById(R.id.checkBox)).isEnabled())
        {
            checkbox="true";
@@ -344,7 +342,7 @@ public class Creation extends AppCompatActivity {
         }
 
 
-        if (lieuPratique==null) {
+        /*if (lieuPratique==null) {
             ((EditText) findViewById(R.id.editText)).setError("Choisissez un lieu");
             return;
         }
@@ -353,10 +351,10 @@ public class Creation extends AppCompatActivity {
             if (lieuPratique.isEmpty() || lieuPratique.equals("Votre lieu de pratique")) {
                 ((EditText) findViewById(R.id.editText)).setError("Choisissez un lieu");
                 return;
-            } else {
+            } else {*/
                 ((EditText) findViewById(R.id.editText)).setError(null);
-            }
-        }
+        /*    }
+        }*/
 
 
 
@@ -364,25 +362,60 @@ public class Creation extends AppCompatActivity {
             ((Button) findViewById(R.id.dateevenement)).setError("Choisissez ");
             return;
         } else {
-            ((Button) findViewById(R.id.dateevenement)).setError(null);
+            if(Calendar.getInstance().get(Calendar.YEAR)>Integer.parseInt(dateExplode[2]) ||
+                    (((Integer) Calendar.getInstance().get(Calendar.YEAR)).equals(Integer.parseInt(dateExplode[2])) && Calendar.getInstance().get(Calendar.MONTH)>Integer.parseInt(dateExplode[1])-1) ||
+                    (((Integer) Calendar.getInstance().get(Calendar.YEAR)).equals(Integer.parseInt(dateExplode[2])) && ((Integer) Calendar.getInstance().get(Calendar.MONTH)).equals(Integer.parseInt(dateExplode[1])-1) && Calendar.getInstance().get(Calendar.DAY_OF_MONTH)>Integer.parseInt(dateExplode[0]))){
+                ((Button) findViewById(R.id.dateevenement)).setError("La date est déjà passée");
+                Toast msgAlert = Toast.makeText(getBaseContext(), ((Button) findViewById(R.id.dateevenement)).getError().toString() , Toast.LENGTH_LONG);
+                msgAlert.show();
+                return;
+            }
+            else {
+                ((Button) findViewById(R.id.dateevenement)).setError(null);
+            }
         }
-
         if (heuredebut.isEmpty() || heuredebut.equals("Heure de debut")) {
             ((Button) findViewById(R.id.heuredebut)).setError("Choisissez l'heure de début ");
             return;
         } else {
-            ((Button) findViewById(R.id.heuredebut)).setError(null);
+
+            if(((Integer) Calendar.getInstance().get(Calendar.YEAR)).equals(Integer.parseInt(dateExplode[2])) &&
+                    ((Integer) Calendar.getInstance().get(Calendar.MONTH)).equals(Integer.parseInt(dateExplode[1])-1) &&
+                    ((Integer) Calendar.getInstance().get(Calendar.DAY_OF_MONTH)).equals(Integer.parseInt(dateExplode[0]))
+            && (((Calendar.getInstance().get(Calendar.HOUR_OF_DAY))>Integer.parseInt(heureDebutExplode[0]))
+            || ((((Integer) Calendar.getInstance().get(Calendar.HOUR_OF_DAY)).equals(Integer.parseInt(heureDebutExplode[0]))) &&
+                    ((Calendar.getInstance().get(Calendar.MINUTE))>Integer.parseInt(heureDebutExplode[1].trim()))))){
+
+                ((Button) findViewById(R.id.heuredebut)).setError("L'heure de début est déjà passée");
+                Toast msgAlertHeure = Toast.makeText(getBaseContext(), ((Button) findViewById(R.id.heuredebut)).getError().toString() , Toast.LENGTH_LONG);
+                msgAlertHeure.show();
+                return;
+            }
+            else {
+                ((Button) findViewById(R.id.heuredebut)).setError(null);
+            }
         }
 
         if (heurefin.isEmpty() || heurefin.equals("Heure de fin")) {
             ((Button) findViewById(R.id.heurefin)).setError("Choisissez l'heure de fin ");
             return;
         } else {
-            ((Button) findViewById(R.id.heurefin)).setError(null);
+            if((Integer.parseInt(heureFinExplode[0])<Integer.parseInt(heureDebutExplode[0])) ||
+                    (heureFinExplode[0].equals(heureDebutExplode[0]) &&
+                            Integer.parseInt(heureFinExplode[1])<Integer.parseInt(heureDebutExplode[1]))){
+
+                ((Button) findViewById(R.id.heurefin)).setError("L'heure de fin est avant l'heure de début");
+                Toast msgAlertHeureFin = Toast.makeText(getBaseContext(), ((Button) findViewById(R.id.heurefin)).getError().toString() , Toast.LENGTH_LONG);
+                msgAlertHeureFin.show();
+                return;
+            }
+            else {
+                ((Button) findViewById(R.id.heurefin)).setError(null);
+            }
         }
 
         if (nbrpersonne.isEmpty() || nbrpersonne.equals("0")) {
-            ((EditText) findViewById(R.id.nombrepersonne)).setError("Combien de personne souhaitez-vous ? ");
+            ((EditText) findViewById(R.id.nombrepersonne)).setError("Combien de personnes souhaitez-vous ? ");
             return;
         } else {
             ((EditText) findViewById(R.id.nombrepersonne)).setError(null);
@@ -433,7 +466,7 @@ public class Creation extends AppCompatActivity {
         @Override //Cette méthode s'execute en premier, elle ouvre une simple boite de dialogue
         protected void onPreExecute() {
             progressDialog.setIndeterminate(true);
-            progressDialog.setMessage("Authentification...");
+            progressDialog.setMessage("Authentificai...");
             progressDialog.show();
         }
 
