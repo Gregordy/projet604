@@ -43,8 +43,8 @@ public class Login extends AppCompatActivity {
     private String result_login = "false";
     private SharedPreferences sharedpreferences;
 
-    @Bind(R.id.input_email)
-    EditText _emailText;
+    @Bind(R.id.input_name)
+    EditText _nameText;
     @Bind(R.id.input_password)
     EditText _passwordText;
     @Bind(R.id.btn_login)
@@ -79,19 +79,18 @@ public class Login extends AppCompatActivity {
 
     public void login() {
 
-
-        String email = _emailText.getText().toString();
+        String name = _nameText.getText().toString();
         String password = _passwordText.getText().toString();
 
-       /* if (email.isEmpty() || !android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-            _emailText.setError("Entrez une adresse mail valide");
+        if (name.isEmpty()) {
+            _nameText.setError("Entrez votre pseudo");
             return;
         } else {
-            _emailText.setError(null);
-        }*/
+            _nameText.setError(null);
+        }
 
-        if (password.isEmpty() || password.length() < 4 || password.length() > 10) {
-            _passwordText.setError("Le mot de passe doit contenir entre 4 et 10 caractères alphanumériques");
+        if (password.isEmpty() || password.length() < 5) {
+            _passwordText.setError("Le mot de passe doit contenir au moins 5 caractères");
             return;
         } else {
             _passwordText.setError(null);
@@ -99,7 +98,7 @@ public class Login extends AppCompatActivity {
 
         // Envoie de la requête http avec la methode post à la base de données
         PostClass requeteHttp = new PostClass();
-        requeteHttp.execute(email, password);
+        requeteHttp.execute(name, password);
     }
 
 
@@ -155,13 +154,11 @@ public class Login extends AppCompatActivity {
 
                     result = CommunicationServeur.envoiMessage("users", "GET", params);
 
-
-
                     //////////////////////JSON////////////////////////////////////
                     try {
 
                         JSONObject object = new JSONObject(result);
-                        Log.d("RETOUR:", object.toString());
+                        //Log.d("RETOUR:", object.toString());
                         return object; // On retourne true ou false
 
 
@@ -187,30 +184,38 @@ public class Login extends AppCompatActivity {
 
             if (th != null) {
 
-                if (!th.equals("false")) {
-                    sharedpreferences = getSharedPreferences("id_utilisateur", Context.MODE_PRIVATE);
-                    SharedPreferences.Editor editor = sharedpreferences.edit();
+                try {
+                    if (th.getBoolean("resultatConnexion")) {
+                        sharedpreferences = getSharedPreferences("id_utilisateur", Context.MODE_PRIVATE);
+                        SharedPreferences.Editor editor = sharedpreferences.edit();
 
-                    try {
-                        editor.putString("id", th.getString("value"));
-                        editor.putString("total", th.getString("total"));
-                    } catch (JSONException e) {
-                        e.printStackTrace();
+                        try {
+                            editor.putString("id", th.getString("value"));
+                            editor.putString("total", th.getString("total"));
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+
+                        editor.commit();
+                        Toast.makeText(getBaseContext(), "Connexion réussie", Toast.LENGTH_LONG).show();
+                        Intent myIntent = new Intent(Login.this, Interface.class);
+                        startActivity(myIntent);
+
+
+                    } else {
+                        try {
+                            Toast.makeText(getBaseContext(), th.getString("erreurConnexion"), Toast.LENGTH_LONG).show();
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
                     }
-
-                    editor.commit();
-                    Toast.makeText(getBaseContext(), "Connexion réussie", Toast.LENGTH_LONG).show();
-                    Intent myIntent = new Intent(Login.this, Interface.class);
-                    startActivity(myIntent);
-
-
-                } else {
-                    Toast.makeText(getBaseContext(), "Erreur de connexion ", Toast.LENGTH_LONG).show();
+                } catch (JSONException e) {
+                    e.printStackTrace();
                 }
 
             }
             else {
-                Toast.makeText(getBaseContext(), "Erreur de connexion ", Toast.LENGTH_LONG).show();
+                Toast.makeText(getBaseContext(), "Erreur inconnue du serveur", Toast.LENGTH_LONG).show();
             }
 
         }

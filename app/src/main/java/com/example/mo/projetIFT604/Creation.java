@@ -15,15 +15,18 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -39,6 +42,7 @@ import java.net.ProtocolException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.HashMap;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -46,7 +50,7 @@ public class Creation extends AppCompatActivity {
 
     private MyTimerTask taskService;
     private Button choixDusport,heuredebut,heurefin,dateevenement;
-    private ImageView _send;//boutton de validation du formulaire
+    private ImageView _send;//bouton de validation du formulaire
 
     private String textPosition="" ;// Nom du lieu ou le sport sera pratique
     //Latitude et Longitude
@@ -79,7 +83,11 @@ public class Creation extends AppCompatActivity {
         choixDusport.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ShowAlertDialogWithListview();
+                try {
+                    ShowAlertDialogWithListview();
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
 
             }
         });
@@ -426,14 +434,20 @@ public class Creation extends AppCompatActivity {
         // Envoie de la requête http avec la method post à la base de données
         PostClass requeteHttp = new PostClass();
 
-        requeteHttp.execute(sport, lieuPratique, latitude, longitude, date, heuredebut, heurefin, nbrpersonne, checkbox,adressField,cityField);
+        requeteHttp.execute(sport, lieuPratique, latitude, longitude, date, heuredebut, heurefin, nbrpersonne, checkbox);
+
+       // /events/{sport} IDvenantBDD/{latitude} chiffre/{longitutde} chiffre/{date}AAAA-MM-DD/{heureDebut} HH:MM:SS/{heureFin}HH:MM:SS/{nbParticipants} int/{materiel} 0/1/{idUtilisateur}
 
 
     }
-    public void ShowAlertDialogWithListview()
-    {
+    public void ShowAlertDialogWithListview() throws JSONException {
 
-        ArrayList<String> listeSport = new ArrayList<>();
+        //Récupération de la liste des sports depuis BDD
+        String[] params=null;
+        String listeSports = CommunicationServeur.envoiMessage("sports", "GET", params);
+        JSONArray listeSportsJson = new JSONArray(listeSports);
+
+       /* ArrayList<String> listeSport = new ArrayList<>();
         listeSport.add(getString(R.string.Football));
         listeSport.add(getString(R.string.Rugby));
         listeSport.add(getString(R.string.Basketball));
@@ -443,20 +457,40 @@ public class Creation extends AppCompatActivity {
         listeSport.add(getString(R.string.Handball));
         listeSport.add(getString(R.string.Course));
         listeSport.add(getString(R.string.Cyclisme));
+         for (int i = 0; i < listeSportsJson.length(); i++) {  // **line 2**
+            JSONObject sportJson = listeSportsJson.getJSONObject(i);
+            int id     = sportJson.getInt("id_sport");
+            String name = sportJson.getString("nom");
+        }
+        */
 
-        final CharSequence[] dialogSport = listeSport.toArray(new String[listeSport.size()]);
-        AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(this);
-        dialogBuilder.setTitle("Sport");
-        dialogBuilder.setItems(dialogSport, new DialogInterface.OnClickListener() {
+        //final CharSequence[] dialogSport = listeSport.toArray(new String[listeSport.size()]);
+        /*AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(this);
+        dialogBuilder.setTitle("Sport");*/
+
+        String[] sportArray = new String[listeSportsJson.length()];
+        HashMap<Integer,String> spinnerMap = new HashMap<Integer, String>();
+        Spinner spinner = new Spinner(Creation.this);
+        for (int i = 0; i < listeSportsJson.length(); i++)
+        {
+            JSONObject sportJson = listeSportsJson.getJSONObject(i);
+            spinnerMap.put(sportJson.getInt("id_sport"), sportJson.getString("nom"));
+            sportArray[i] =  sportJson.getString("nom");
+        }
+        ArrayAdapter<String> adapter =new ArrayAdapter<String>(Creation.this,R.layout.activity_creation, sportArray);
+        adapter.setDropDownViewResource(R.layout.activity_creation);
+        spinner.setAdapter(adapter);
+       /* dialogBuilder.setItems(listeSportsJson, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int item) {
-                String selectedText = dialogSport[item].toString();  //Selected item in listview
+
+                String selectedText = listeSportsJson[1][item].toString();  //Selected item in listview
                 choixDusport.setText(selectedText);
             }
         });
         //Create alert dialog object via builder
-        AlertDialog alertDialogObject = dialogBuilder.create();
+        AlertDialog alertDialogObject = dialogBuilder.create();*/
         //Show the dialog
-        alertDialogObject.show();
+        //alertDialogObject.show();
     }
 
     private class PostClass extends AsyncTask<String, Void, String> {

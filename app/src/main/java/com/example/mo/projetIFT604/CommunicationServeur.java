@@ -1,6 +1,8 @@
 package com.example.mo.projetIFT604;
 
 
+import android.util.Log;
+
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.Reader;
@@ -23,21 +25,19 @@ public class CommunicationServeur {
 
             for (int i = 0; i < params.length; i++)
             {
-                paramsURL += "/"+params[i];
+                paramsURL += "/"+params[i].trim();
             }
 
-            url = new URL(URLServeur + "/"+nomRessource+"/" + paramsURL);
+            url = new URL(URLServeur + "/"+nomRessource + paramsURL);
 
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             connection.setConnectTimeout(3000);
             connection.setRequestMethod(nomMethode);
-            connection.setDoInput(true);
-            connection.setDoOutput(true);
 
             connection.connect();
-
+            Log.d("Code de réponse", ""+connection.getResponseCode()+"");
             Reader reader = new InputStreamReader(connection.getInputStream(), "UTF-8");
-            char[] buffer = new char[50];
+            char[] buffer = new char[2000];
             reader.read(buffer);
             String result = new String(buffer);
             reader.close();
