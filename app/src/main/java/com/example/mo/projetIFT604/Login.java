@@ -83,12 +83,12 @@ public class Login extends AppCompatActivity {
         String email = _emailText.getText().toString();
         String password = _passwordText.getText().toString();
 
-        if (email.isEmpty() || !android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+       /* if (email.isEmpty() || !android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
             _emailText.setError("Entrez une adresse mail valide");
             return;
         } else {
             _emailText.setError(null);
-        }
+        }*/
 
         if (password.isEmpty() || password.length() < 4 || password.length() > 10) {
             _passwordText.setError("Le mot de passe doit contenir entre 4 et 10 caractères alphanumériques");
@@ -153,72 +153,27 @@ public class Login extends AppCompatActivity {
                 if (info[i].getState() == NetworkInfo.State.CONNECTED) {
                     String result;
 
+                    result = CommunicationServeur.envoiMessage("users", "GET", params);
+
+
+
+                    //////////////////////JSON////////////////////////////////////
                     try {
-                        /////////////////////////////// REQUETE HTTP /////////////////////
-                        URL url = new URL("http://humanapp.assos.efrei.fr/shareyoursport/script/shareyoursportcontroller.php");
-                        HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-                        connection.setConnectTimeout(3000);
-                        connection.setRequestMethod("POST");
-                        connection.setDoInput(true);
-                        connection.setDoOutput(true);
 
-                        /// Mise en place des differents parametre necessaire ////
-
-                        Uri.Builder builder = new Uri.Builder()
-                                .appendQueryParameter("OBJET", "login")
-                                .appendQueryParameter("EMAIL", params[0]) // params[0] entree en parametre dans la method login (cf:  requeteHttp.execute(email, password);)
-                                .appendQueryParameter("PASSWORD", params[1]); //idem
-                        String query = builder.build().getEncodedQuery();
-
-                        OutputStream os = connection.getOutputStream();
-                        BufferedWriter writer = new BufferedWriter(
-                                new OutputStreamWriter(os, "UTF-8"));
-                        writer.write(query);
-                        writer.flush();
-                        writer.close();
-                        os.close();
-
-                        connection.connect();
+                        JSONObject object = new JSONObject(result);
+                        Log.d("RETOUR:", object.toString());
+                        return object; // On retourne true ou false
 
 
-                        ///////////////////////////////BUFFERREADER/////////////////////
+                    } catch (JSONException e) {
+                        Log.e("log_tag", "Error parsing data " + e.toString());
 
-                        Reader reader = new InputStreamReader(connection.getInputStream(), "UTF-8");
-                        char[] buffer = new char[50];
-                        reader.read(buffer);  /// On recupère ce que nous a envoyé le fichier php
-                        result = new String(buffer);
-                        reader.close();
-
-
-                        //////////////////////JSON////////////////////////////////////
-                        try {
-
-                            JSONObject object = new JSONObject(result);
-                            connection.disconnect();
-                            return object; // On retourne true ou false
-
-
-                        } catch (JSONException e) {
-                            Log.e("log_tag", "Error parsing data " + e.toString());
-
-                        }
-
-                        ///////////////// Code permettant de vérifier la connexion avec le server////////////////
-                  /*      if (connection.getResponseCode() == 200) {
-                            return   String.valueOf(connection.getResponseCode()) + " "+ connection.getResponseMessage();
-                        }
-
-                        return    String.valueOf(connection.getResponseCode()) + " "+ connection.getResponseMessage();
-                    */
-                    } catch (MalformedURLException e) {
-                        e.printStackTrace();
-                    } catch (ProtocolException e) {
-                        e.printStackTrace();
-                    } catch (IOException e) {
-                        e.printStackTrace();
                     }
 
+
                 }
+
+
             }
 
             return null;

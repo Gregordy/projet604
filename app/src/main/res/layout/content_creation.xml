@@ -88,7 +88,7 @@
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Date de l&apos;évènement"
+                    android:text="Date de l&apos;événement"
                     android:id="@+id/dateevenement" />
 
             </LinearLayout>
@@ -109,7 +109,7 @@
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Heure de debut"
+                    android:text="Heure de début"
                     android:id="@+id/heuredebut" />
 
                 <Button
@@ -128,10 +128,10 @@
                 android:gravity="center">
 
                 <ImageView
-                android:id="@+id/plus"
+                    android:id="@+id/minus"
                     android:layout_width="60dp"
                     android:layout_height="60dp"
-                android:src="@drawable/plus"
+                    android:src="@drawable/minus"
                     android:layout_above="@+id/equipement"
                     android:layout_toEndOf="@+id/equipement" />
 
@@ -147,11 +147,11 @@
                     android:textColor="#ffffff" />
 
                 <ImageView
-                android:id="@+id/minus"
+                    android:id="@+id/plus"
                     android:layout_width="60dp"
                     android:layout_height="60dp"
-                android:src="@drawable/minus"
-                    android:layout_alignTop="@+id/plus"
+                    android:src="@drawable/plus"
+                    android:layout_alignTop="@+id/minus"
                     android:layout_alignParentRight="true"
                     android:layout_alignParentEnd="true" />
 
@@ -185,7 +185,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/checkBox"
                     android:checked="false"
-                     />
+                    />
             </LinearLayout>
 
             <LinearLayout
