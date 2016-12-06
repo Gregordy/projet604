@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">projetIFT604</string>
+    <string name="app_name">Sport ensemble</string>
     <string name="action_settings">Options</string>
     <string name="title_activity_creation">Création</string>
     <!-- Liste des sports-->
@@ -15,7 +15,7 @@
     <!-- fin Liste des sports-->
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Mot de passe (optionel)</string>
-    <string name="action_sign_in">Se Connecter ou s\'Inscrire</string>
+    <string name="action_sign_in">Se connecter ou s\'inscrire</string>
     <string name="action_sign_in_short">Connexion</string>
     <string name="error_invalid_email">Cette adresse mail n\'est pas valide</string>
     <string name="error_invalid_password">Ce mot de passe est trop court</string>
