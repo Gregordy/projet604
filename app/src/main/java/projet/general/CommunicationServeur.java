@@ -2,11 +2,17 @@ package projet.general;
 
 import android.util.Log;
 
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.Reader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.concurrent.Callable;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
 
 /**
  * Class CommunicationServeur
@@ -25,54 +31,53 @@ public class CommunicationServeur {
      * @param params : Autres paramètres de la requête sous la forme d'un tableau
      * @return résultat JSON (String) de la requête
      */
-    public static String envoiMessage(String nomRessource, String nomMethode, String... params) {
+    public static String envoiMessage(final String nomRessource, final String nomMethode, final String... params) {
+      Log.d("Envoi d'une requête", "RESSOURCE = "+nomRessource+", METHODE = "+nomMethode);
 
-        URL url;
-        String result = null;
-        Log.d("Envoi d'une requête", "RESSOURCE = "+nomRessource+", METHODE = "+nomMethode);
-
-        try {
-
-            // Construction de l'URL
+      ExecutorService executorService = Executors.newSingleThreadExecutor();
+      Callable<String> callable       = new Callable<String>() {
+        @Override
+        public String call() throws Exception {
+          try {
+            URL url;
             String paramsURL = "";
 
-            for (String param : params) {
-                paramsURL += "/" + param.trim();
-            }
+            // Construction de l'URL
+            if(params != null) { for (String param : params) { paramsURL += "/" + param.trim(); } }
 
-            String URLServeur = "http://humanapp.assos.efrei.fr/IFT604-Projet";
-            url = new URL(URLServeur + "/"+nomRessource + paramsURL);
+            url = new URL("http://humanapp.assos.efrei.fr/IFT604-Projet/"+nomRessource + paramsURL);
 
             // Construction de la requête
-            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+            final HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             connection.setConnectTimeout(3000);
             connection.setRequestMethod(nomMethode);
+            connection.connect(); // Envoi de la requête
 
-            // Envoi de la requête
-            connection.connect();
-            Log.d("Envoi d'une requête", "URL = "+ URLServeur + "/"+nomRessource + paramsURL+", CODE DE RETOUR = "+connection.getResponseCode());
+            Log.d("Envoi d'une requête", "URL = http://humanapp.assos.efrei.fr/IFT604-Projet/"+nomRessource + paramsURL+", CODE DE RETOUR = "+connection.getResponseCode());
+            Log.d("Réponse de la requête", "REPONSE = " + connection.getResponseMessage());
 
-            // Récupération de la réponse
-            Log.d("Réponse de la requête", "REPONSE = "+connection.getResponseMessage());
+            // Traitement de la réponse
+            byte[] read = new byte[512];
+            ByteArrayOutputStream reader = new ByteArrayOutputStream(2048);
+            for(int i; -1 != (i = connection.getInputStream().read(read)); reader.write(read, 0, i));
 
-            Reader reader = new InputStreamReader(connection.getInputStream(), "UTF-8");
-            char[] buffer = new char[2000];
-
-            int nbLecture = reader.read(buffer);
-            Log.d("Réponse de la requête", "TAILLE = "+nbLecture);
-            result = new String(buffer);
-
-            reader.close();
-
-            // Fermeture de la connexion
             connection.disconnect();
 
-        } catch (IOException e) {
-            e.printStackTrace();
+            return reader.toString();
+          } catch(IOException ex) {
+            ex.printStackTrace();
+          }
+          return null;
         }
+      };
 
-        // Renvoi de la réponse de la requête
-        return result;
+      Future<String> future = executorService.submit(callable);
+
+      String res = null;
+      try { res = future.get(); } catch (InterruptedException | ExecutionException e) { e.printStackTrace(); }
+      executorService.shutdown();
+      
+      return res; // Renvoi de la réponse de la requête
     }
 
 
