@@ -13,7 +13,7 @@
         android:theme="@style/AppTheme" >
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="@string/google_maps_key" />
+            android:value="@string/AIzaSyASaAlwxnBLvJdyqoArsC4RFl1hnFoWE5U" /> <!-- La clé est en dur ici, sans quoi ça ne fonctionne pas -->
 
         <activity
             android:name="projet.application.MenuActivity"
