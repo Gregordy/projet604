@@ -30,20 +30,20 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name="projet.Interface"
+            android:name="projet.application.MenuActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
         <activity
-            android:name="projet.Creation"
+            android:name="projet.application.CreationEvenementActivity"
             android:label="@string/title_activity_creation"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="projet.utilisateur.Profil"
+            android:name="projet.utilisateur.ProfilActivity"
             android:label="@string/title_activity_profil"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="projet.utilisateur.Connexion"
+            android:name="projet.utilisateur.ConnexionActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" >
             <intent-filter>
@@ -53,24 +53,24 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="projet.parametre_utilisateur"
+            android:name="projet.utilisateur.ParametreUtilisateur"
             android:label="@string/title_activity_parametre_utilisateur"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="projet.utilisateur.Signup"
+            android:name="projet.utilisateur.InscriptionActivity"
             android:label="@string/title_activity_signup"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="projet.MapsActivity"
+            android:name="projet.carte.CarteActivity"
             android:label="@string/title_activity_maps" >
         </activity>
         <activity
-            android:name="projet.MapsActivityCreation"
+            android:name="projet.carte.CarteCreationActivity"
             android:label="@string/title_activity_maps" >
         </activity>
 
         <service
-            android:name="projet.EvenementService"
+            android:name="projet.application.EvenementService"
             android:exported="false" >
         </service>
         <!-- Include the AdActivity and InAppPurchaseActivity configChanges and themes. -->

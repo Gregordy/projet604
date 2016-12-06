@@ -2,310 +2,292 @@
 <items version="2" >
 
     <item
-        is-multidex="true"
-        jar="C:\Users\Minignouf\Documents\Cours\UTC\GI05\IFT-604\projet 604\code\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\8.4.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="b5e7892fb0708e792e0e933c4c0a0ca0ac7831fb">
-        <dex dex="C:\Users\Minignouf\Documents\Cours\UTC\GI05\IFT-604\projet 604\code\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-ads-8.4.0_fca59af850f4f64eab036055a285d2c9b22360e2\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Minignouf\Documents\Cours\UTC\GI05\IFT-604\projet 604\code\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="5c5699834e9722f1c288fea2de82725d078ba127">
-        <dex dex="C:\Users\Minignouf\Documents\Cours\UTC\GI05\IFT-604\projet 604\code\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-23.1.1_da66c9ae37c0b3e8fe26c2d61b931514d2fe0479\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Minignouf\Documents\Cours\UTC\GI05\IFT-604\projet 604\code\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\8.4.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="65d086ee9daaf87b5af62ad24471edafa433354c">
-        <dex dex="C:\Users\Minignouf\Documents\Cours\UTC\GI05\IFT-604\projet 604\code\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-appindexing-8.4.0_b7218d509315264e479815b208440225159c6fbb\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Minignouf\Documents\Cours\UTC\GI05\IFT-604\projet 604\code\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="bd88cf2c8256ce6faa6daa42064c1615859ffb46">
-        <dex dex="C:\Users\Minignouf\Documents\Cours\UTC\GI05\IFT-604\projet 604\code\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_79bb121ea022247849a0a4047cd9e9102eea5787\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Minignouf\Documents\Cours\UTC\GI05\IFT-604\projet 604\code\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\23.0.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="d358b3dd49a7c67844622dcbc9cf4339e13952ce">
-        <dex dex="C:\Users\Minignouf\Documents\Cours\UTC\GI05\IFT-604\projet 604\code\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-mediarouter-v7-23.0.0_6772caf35cecf7565d838ffc8143aba52e40b83d\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Minignouf\Documents\Cours\UTC\GI05\IFT-604\projet 604\code\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="7f206f0fd26531388aea80260eafc3bd7dd5212f">
-        <dex dex="C:\Users\Minignouf\Documents\Cours\UTC\GI05\IFT-604\projet 604\code\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_08091a48a487cbf95e0ffecbc1625320f4ec8f08\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Minignouf\Documents\Cours\UTC\GI05\IFT-604\projet 604\code\app\build\intermediates\exploded-aar\com.android.support\design\23.1.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="379471b2bd17d9737c050345c08e8c7d16589784">
-        <dex dex="C:\Users\Minignouf\Documents\Cours\UTC\GI05\IFT-604\projet 604\code\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-23.1.1_a8fe47703ad1e203f62ced4fe11e06fdae8d9b9d\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Minignouf\Documents\Cours\UTC\GI05\IFT-604\projet 604\code\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-plus\8.4.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="1a78298e7724d5440d210bcb946b3493250d354d">
-        <dex dex="C:\Users\Minignouf\Documents\Cours\UTC\GI05\IFT-604\projet 604\code\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-plus-8.4.0_ff4266ad46779bb5ec4e62f2baef3e440bd1a170\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Minignouf\Documents\Cours\UTC\GI05\IFT-604\projet 604\code\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appinvite\8.4.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="9fe026fb4c7fce21bc5142f6e1bdf844f28061ac">
-        <dex dex="C:\Users\Minignouf\Documents\Cours\UTC\GI05\IFT-604\projet 604\code\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-appinvite-8.4.0_5213c597fc1e16e9f1c9890b250ea44b94fad088\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Minignouf\Documents\Cours\UTC\GI05\IFT-604\projet 604\code\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-vision\8.4.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="dfecc4d835cdabcdecf7e95f0d20a3ef1e9d8ef4">
-        <dex dex="C:\Users\Minignouf\Documents\Cours\UTC\GI05\IFT-604\projet 604\code\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-vision-8.4.0_922b1935ca04824f9a3388877134f285e9e62ebb\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Minignouf\Documents\Cours\UTC\GI05\IFT-604\projet 604\code\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-panorama\8.4.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="08d34b2d135c1cc96ab506fd8bf6916d1e2f391a">
-        <dex dex="C:\Users\Minignouf\Documents\Cours\UTC\GI05\IFT-604\projet 604\code\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-panorama-8.4.0_9d96e841fe31a3efbfe39bc65e2824513ea08e9c\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Minignouf\Documents\Cours\UTC\GI05\IFT-604\projet 604\code\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\8.4.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="1c9f35e952b212c843f7bd2c7eec8e82ad95602e">
-        <dex dex="C:\Users\Minignouf\Documents\Cours\UTC\GI05\IFT-604\projet 604\code\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-analytics-8.4.0_ef282d1a938a48d4c8ffb33613478e9fcc8152af\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Minignouf\Documents\Cours\UTC\GI05\IFT-604\projet 604\code\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\8.4.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="fef2b3e4b6b1b0e5fe7b69fa137a5fa55a3182ab">
-        <dex dex="C:\Users\Minignouf\Documents\Cours\UTC\GI05\IFT-604\projet 604\code\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-base-8.4.0_92b27b810f53d6e97e63a10f13baed051136f834\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Minignouf\Documents\Cours\UTC\GI05\IFT-604\projet 604\code\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast\8.4.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="551e78f21acf69ebfb489c0e79647824c838013e">
-        <dex dex="C:\Users\Minignouf\Documents\Cours\UTC\GI05\IFT-604\projet 604\code\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-cast-8.4.0_4be7efd856eb357370622669c7b9870c4b79aa7c\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Minignouf\Documents\Cours\UTC\GI05\IFT-604\projet 604\code\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\8.4.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="a8412b654dab86d57bf90683367488211c8a81f1">
-        <dex dex="C:\Users\Minignouf\Documents\Cours\UTC\GI05\IFT-604\projet 604\code\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-location-8.4.0_f7dc976401c0843cd3b4c3370aac9644d0424fda\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Minignouf\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.1.1\support-annotations-23.1.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
-        <dex dex="C:\Users\Minignouf\Documents\Cours\UTC\GI05\IFT-604\projet 604\code\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-23.1.1_e7994e58eb27ef4af20cd8b6456980b72ecabf1c\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Minignouf\.gradle\caches\modules-2\files-2.1\com.jakewharton\butterknife\7.0.1\d5d13ea991eab0252e3710e5df3d6a9d4b21d461\butterknife-7.0.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="d5d13ea991eab0252e3710e5df3d6a9d4b21d461">
-        <dex dex="C:\Users\Minignouf\Documents\Cours\UTC\GI05\IFT-604\projet 604\code\app\build\intermediates\transforms\dex\debug\folders\1000\10\butterknife-7.0.1_09b6e324811e8531f6a4bb7c8e1569bfba4a5255\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Minignouf\Documents\Cours\UTC\GI05\IFT-604\projet 604\code\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\8.4.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="04de44f90606c77f3b28cf44861f306290505aac">
-        <dex dex="C:\Users\Minignouf\Documents\Cours\UTC\GI05\IFT-604\projet 604\code\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-maps-8.4.0_962741cd50b11c048a35c00a5a69f61ef2d2558d\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Minignouf\Documents\Cours\UTC\GI05\IFT-604\projet 604\code\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth\8.4.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="966e5771a5a2ebfb31bf00d7cd6cd2546d245517">
-        <dex dex="C:\Users\Minignouf\Documents\Cours\UTC\GI05\IFT-604\projet 604\code\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-auth-8.4.0_1d34914c6ba8b6056d8f1dfb2df456df7a5cb29b\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Minignouf\Documents\Cours\UTC\GI05\IFT-604\projet 604\code\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-games\8.4.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="3a364cc6b698d1b3b2d284f64618daaa7fe77ddf">
-        <dex dex="C:\Users\Minignouf\Documents\Cours\UTC\GI05\IFT-604\projet 604\code\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-games-8.4.0_ab8d4c4eab4be6e81038c3e978fd2df79f2e3d75\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Minignouf\Documents\Cours\UTC\GI05\IFT-604\projet 604\code\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
-        <dex dex="C:\Users\Minignouf\Documents\Cours\UTC\GI05\IFT-604\projet 604\code\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-23.1.1_71d941ea6b134220b21f3389a82b58ed433327fe\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Minignouf\Documents\Cours\UTC\GI05\IFT-604\projet 604\code\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-identity\8.4.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="b82b8e847173c28efffcd291b2a0b1ae9ad17fa4">
-        <dex dex="C:\Users\Minignouf\Documents\Cours\UTC\GI05\IFT-604\projet 604\code\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-identity-8.4.0_7c91fcffa76c5737c19e06f966df1fb977a6263f\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Minignouf\Documents\Cours\UTC\GI05\IFT-604\projet 604\code\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-measurement\8.4.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="613298b7aa012f121ce542881c0a599ebd8078f2">
-        <dex dex="C:\Users\Minignouf\Documents\Cours\UTC\GI05\IFT-604\projet 604\code\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-measurement-8.4.0_d3dfb519145e759ee717d0fe3e992cad75ff47ec\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Minignouf\Documents\Cours\UTC\GI05\IFT-604\projet 604\code\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-nearby\8.4.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="9cad249cf62751a323d9af568caf12284b7d6062">
-        <dex dex="C:\Users\Minignouf\Documents\Cours\UTC\GI05\IFT-604\projet 604\code\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-nearby-8.4.0_15037e8b3b372f8a84fe2f454c375d13eb973a2c\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Minignouf\Documents\Cours\UTC\GI05\IFT-604\projet 604\code\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="8e673cdfadd8f2d98fdb2fda2285c30f6e449782">
-        <dex dex="C:\Users\Minignouf\Documents\Cours\UTC\GI05\IFT-604\projet 604\code\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-basement-8.4.0_ac90e86c7e0015d2fe932e900abb05abc0d46c56\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Minignouf\Documents\Cours\UTC\GI05\IFT-604\projet 604\code\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-safetynet\8.4.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="0194a7409c40de94fb539d4ad9928ec5d47afeb7">
-        <dex dex="C:\Users\Minignouf\Documents\Cours\UTC\GI05\IFT-604\projet 604\code\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-safetynet-8.4.0_7340a5864c51e46e17d47f227fc54cbf24ebae12\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Minignouf\Documents\Cours\UTC\GI05\IFT-604\projet 604\code\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\libs\internal_impl-23.1.1.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="C:\Users\enguerran\Documents\TP-Git\projet604\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\libs\internal_impl-23.1.1.jar"
+        jumboMode="false"
         optimize="true"
         revision="23.0.2"
         sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
-        <dex dex="C:\Users\Minignouf\Documents\Cours\UTC\GI05\IFT-604\projet 604\code\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.1.1_13a27aedc7fce3452a979d5ec0537d46551bcc32\classes.dex" />
+        <dex dex="C:\Users\enguerran\Documents\TP-Git\projet604\app\build\intermediates\pre-dexed\debug\internal_impl-23.1.1_70978c699cedcebdfbefbae6126d217208a562c1.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="C:\Users\Minignouf\Documents\Cours\UTC\GI05\IFT-604\projet 604\code\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wallet\8.4.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="f2df436a8f02ce7e4d7d209671fc45f97c470f0e">
-        <dex dex="C:\Users\Minignouf\Documents\Cours\UTC\GI05\IFT-604\projet 604\code\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-wallet-8.4.0_bc47ce9937f8c2f41643d297addd0536fbbd4273\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Minignouf\Documents\Cours\UTC\GI05\IFT-604\projet 604\code\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\8.4.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="2d7fe76982677315c4dc4edfb459c8ca718a9d4c">
-        <dex dex="C:\Users\Minignouf\Documents\Cours\UTC\GI05\IFT-604\projet 604\code\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-gcm-8.4.0_4a052dbf18e61162e8fa6a8ddde77be2afb6efe9\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Minignouf\Documents\Cours\UTC\GI05\IFT-604\projet 604\code\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-drive\8.4.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="b36f30ac5ee5d5214f4b1e2ac49f11889d58e71a">
-        <dex dex="C:\Users\Minignouf\Documents\Cours\UTC\GI05\IFT-604\projet 604\code\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-drive-8.4.0_9ff0865bed4ee0ee0d4a4bb4ef22312b519b8adb\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Minignouf\Documents\Cours\UTC\GI05\IFT-604\projet 604\code\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\8.4.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="e167a34eaca0b31704212f43f9576ea84e05046f">
-        <dex dex="C:\Users\Minignouf\Documents\Cours\UTC\GI05\IFT-604\projet 604\code\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-wearable-8.4.0_c5605aba76bb47133f2fb36bb9b0842380f24a38\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Minignouf\Documents\Cours\UTC\GI05\IFT-604\projet 604\code\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-fitness\8.4.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="c54246475c1bb64ac6857d1320364bfbfeda2c46">
-        <dex dex="C:\Users\Minignouf\Documents\Cours\UTC\GI05\IFT-604\projet 604\code\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-fitness-8.4.0_65551ba9f9f6279e6ea822fd217d17af922e6d64\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Minignouf\Documents\Cours\UTC\GI05\IFT-604\projet 604\code\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\23.0.0\jars\libs\internal_impl-23.0.0.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="C:\Users\enguerran\Documents\TP-Git\projet604\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\23.0.0\jars\libs\internal_impl-23.0.0.jar"
+        jumboMode="false"
         optimize="true"
         revision="23.0.2"
         sha1="03d38bb042efe3e5ce27ba66b729a9523c36d8fe">
-        <dex dex="C:\Users\Minignouf\Documents\Cours\UTC\GI05\IFT-604\projet 604\code\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.0.0_cb573e594391f2847ed7a4ce3184608ca55c9830\classes.dex" />
+        <dex dex="C:\Users\enguerran\Documents\TP-Git\projet604\app\build\intermediates\pre-dexed\debug\internal_impl-23.0.0_6d11f4a117ae1556b70d62e550574cc5cfa7da77.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="C:\Users\Minignouf\Documents\Cours\UTC\GI05\IFT-604\projet 604\code\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.1.1\jars\classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="C:\Users\enguerran\Documents\TP-Git\projet604\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="5c5699834e9722f1c288fea2de82725d078ba127">
+        <dex dex="C:\Users\enguerran\Documents\TP-Git\projet604\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-23.1.1_7a725cff1bc20e9a06d4bf1830c414d5253d08de.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\enguerran\Documents\TP-Git\projet604\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-games\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="3a364cc6b698d1b3b2d284f64618daaa7fe77ddf">
+        <dex dex="C:\Users\enguerran\Documents\TP-Git\projet604\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-games-8.4.0_73553515a90d24e36c97e709ef842686bf2ac19b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\enguerran\Documents\TP-Git\projet604\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-plus\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="1a78298e7724d5440d210bcb946b3493250d354d">
+        <dex dex="C:\Users\enguerran\Documents\TP-Git\projet604\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-plus-8.4.0_61d43951d7d4d492d8e0527ee3d0a4dc93899cc4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\enguerran\Documents\TP-Git\projet604\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="2d7fe76982677315c4dc4edfb459c8ca718a9d4c">
+        <dex dex="C:\Users\enguerran\Documents\TP-Git\projet604\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-gcm-8.4.0_6478ebefaa4735cbd5a1f620fee318f118c44cd2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\enguerran\Documents\TP-Git\projet604\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="b5e7892fb0708e792e0e933c4c0a0ca0ac7831fb">
+        <dex dex="C:\Users\enguerran\Documents\TP-Git\projet604\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-ads-8.4.0_5287a32528a0296db105609dda9a5b5d5ef05dec.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\enguerran\Documents\TP-Git\projet604\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.1.1\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="23.0.2"
         sha1="09c5e804bc67fc0580360043dff067df574a60d4">
-        <dex dex="C:\Users\Minignouf\Documents\Cours\UTC\GI05\IFT-604\projet 604\code\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-23.1.1_f7d02efb530eead486f44f31673099bfdc050302\classes.dex" />
+        <dex dex="C:\Users\enguerran\Documents\TP-Git\projet604\app\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-23.1.1_20a5f7a52cbacefdd6b838ea9c6f424e94c83fb3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\enguerran\Documents\TP-Git\projet604\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-measurement\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="613298b7aa012f121ce542881c0a599ebd8078f2">
+        <dex dex="C:\Users\enguerran\Documents\TP-Git\projet604\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-measurement-8.4.0_9340cbfb9f48850dfccfcfc643d69fd9103e0f81.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\enguerran\Documents\TP-Git\projet604\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-fitness\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="c54246475c1bb64ac6857d1320364bfbfeda2c46">
+        <dex dex="C:\Users\enguerran\Documents\TP-Git\projet604\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-fitness-8.4.0_5e72daa6f9d987ce9c545123703bb33ad1f9b16e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\enguerran\Documents\TP-Git\projet604\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="a8412b654dab86d57bf90683367488211c8a81f1">
+        <dex dex="C:\Users\enguerran\Documents\TP-Git\projet604\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-location-8.4.0_f0fc1c2d6546f90848188d9deff0ad72c54849b8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\enguerran\Documents\TP-Git\projet604\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
+        <dex dex="C:\Users\enguerran\Documents\TP-Git\projet604\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-23.1.1_46237aee883db2a61296868c6c8e127d173aecbf.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\enguerran\Documents\TP-Git\projet604\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-panorama\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="08d34b2d135c1cc96ab506fd8bf6916d1e2f391a">
+        <dex dex="C:\Users\enguerran\Documents\TP-Git\projet604\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-panorama-8.4.0_032e759b11ce782765a14d90e97e74789c40a0eb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\enguerran\Documents\TP-Git\projet604\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-safetynet\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="0194a7409c40de94fb539d4ad9928ec5d47afeb7">
+        <dex dex="C:\Users\enguerran\Documents\TP-Git\projet604\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-safetynet-8.4.0_b1af6c85307d65d28a48eeb3e655aa5577c74872.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\enguerran\Documents\TP-Git\projet604\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="8e673cdfadd8f2d98fdb2fda2285c30f6e449782">
+        <dex dex="C:\Users\enguerran\Documents\TP-Git\projet604\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-basement-8.4.0_27242819c71a1894c8f4c8d230277b0df7d7c5a6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\enguerran\Documents\TP-Git\projet604\app\build\intermediates\exploded-aar\com.android.support\design\23.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="379471b2bd17d9737c050345c08e8c7d16589784">
+        <dex dex="C:\Users\enguerran\Documents\TP-Git\projet604\app\build\intermediates\pre-dexed\debug\com.android.support-design-23.1.1_c06de177db244a00a55e7090cd1a8b22000e7d6f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\enguerran\Documents\TP-Git\projet604\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="65d086ee9daaf87b5af62ad24471edafa433354c">
+        <dex dex="C:\Users\enguerran\Documents\TP-Git\projet604\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-appindexing-8.4.0_612b40587379f5ae5ea29d4dd037c9ef23f39ade.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\enguerran\Documents\TP-Git\projet604\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="fef2b3e4b6b1b0e5fe7b69fa137a5fa55a3182ab">
+        <dex dex="C:\Users\enguerran\Documents\TP-Git\projet604\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-base-8.4.0_e4d99e2225a5a92d84027d2bd1e5b77489a6d3cb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\enguerran\Documents\TP-Git\projet604\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="1c9f35e952b212c843f7bd2c7eec8e82ad95602e">
+        <dex dex="C:\Users\enguerran\Documents\TP-Git\projet604\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-analytics-8.4.0_687e84877dc6b30fe385bb358f391ced07393536.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\enguerran\Documents\TP-Git\projet604\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-nearby\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="9cad249cf62751a323d9af568caf12284b7d6062">
+        <dex dex="C:\Users\enguerran\Documents\TP-Git\projet604\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-nearby-8.4.0_5ff9b574e24f5889ff3c219e1286d9e78d9cbd0e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\enguerran\Documents\TP-Git\projet604\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="551e78f21acf69ebfb489c0e79647824c838013e">
+        <dex dex="C:\Users\enguerran\Documents\TP-Git\projet604\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-cast-8.4.0_6cd8a6bd202e4defa95573b5667ce802c3a4f826.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\enguerran\Documents\TP-Git\projet604\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wallet\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="f2df436a8f02ce7e4d7d209671fc45f97c470f0e">
+        <dex dex="C:\Users\enguerran\Documents\TP-Git\projet604\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-wallet-8.4.0_e3f4ed9bd2173ff5b12914f2a0b1f7d41c5d5966.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\enguerran\.gradle\caches\modules-2\files-2.1\com.jakewharton\butterknife\7.0.1\d5d13ea991eab0252e3710e5df3d6a9d4b21d461\butterknife-7.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="d5d13ea991eab0252e3710e5df3d6a9d4b21d461">
+        <dex dex="C:\Users\enguerran\Documents\TP-Git\projet604\app\build\intermediates\pre-dexed\debug\butterknife-7.0.1_0abde37af7172430c82808774a92e2658d3ba3fa.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\enguerran\Documents\TP-Git\projet604\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-identity\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="b82b8e847173c28efffcd291b2a0b1ae9ad17fa4">
+        <dex dex="C:\Users\enguerran\Documents\TP-Git\projet604\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-identity-8.4.0_6968b7cfe0a421389108da93431cf5027dc610a6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\enguerran\Documents\TP-Git\projet604\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="e167a34eaca0b31704212f43f9576ea84e05046f">
+        <dex dex="C:\Users\enguerran\Documents\TP-Git\projet604\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-wearable-8.4.0_28091f8b7617c3c4755269605d84a702e22bfa4a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\enguerran\Documents\TP-Git\projet604\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-vision\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="dfecc4d835cdabcdecf7e95f0d20a3ef1e9d8ef4">
+        <dex dex="C:\Users\enguerran\Documents\TP-Git\projet604\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-vision-8.4.0_94adf9785c49339fb61382ad00b1045281791a5a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\enguerran\Documents\TP-Git\projet604\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appinvite\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="9fe026fb4c7fce21bc5142f6e1bdf844f28061ac">
+        <dex dex="C:\Users\enguerran\Documents\TP-Git\projet604\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-appinvite-8.4.0_879ad567f16b2304be72a084d9d198f496a76e31.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\enguerran\Documents\TP-Git\projet604\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-drive\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="b36f30ac5ee5d5214f4b1e2ac49f11889d58e71a">
+        <dex dex="C:\Users\enguerran\Documents\TP-Git\projet604\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-drive-8.4.0_7338b55a66a2d32cd313b2f7716b2e737db82516.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\enguerran\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.1.1\support-annotations-23.1.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
+        <dex dex="C:\Users\enguerran\Documents\TP-Git\projet604\app\build\intermediates\pre-dexed\debug\support-annotations-23.1.1_51160a5c884bbf2c03137df7877c7dec778af494.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\enguerran\Documents\TP-Git\projet604\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="966e5771a5a2ebfb31bf00d7cd6cd2546d245517">
+        <dex dex="C:\Users\enguerran\Documents\TP-Git\projet604\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-auth-8.4.0_e64035b70a107c4c5002bc1774fe02e9545ae455.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\enguerran\Documents\TP-Git\projet604\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="04de44f90606c77f3b28cf44861f306290505aac">
+        <dex dex="C:\Users\enguerran\Documents\TP-Git\projet604\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-maps-8.4.0_65dcbfd6a78c9290598ccdf39c50aac413efa52e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\enguerran\Documents\TP-Git\projet604\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\23.0.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="d358b3dd49a7c67844622dcbc9cf4339e13952ce">
+        <dex dex="C:\Users\enguerran\Documents\TP-Git\projet604\app\build\intermediates\pre-dexed\debug\com.android.support-mediarouter-v7-23.0.0_e99b1e87e46a209f04f9598ad8bf93033b3fa0be.jar" />
     </item>
 
 </items>

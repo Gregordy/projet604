@@ -1,0 +1,43 @@
+package projet.sport;
+
+import com.google.android.gms.maps.model.LatLng;
+
+import java.util.Iterator;
+import java.util.Vector;
+
+import projet.sport.SportField;
+
+/**
+ * CLASSE SUPPOSÉE CONTENIR TOUS LES SPORTS
+ *
+ */
+public class SportFieldGroup implements Iterable<SportField>{
+    Vector<SportField> allSports = new Vector<SportField>();
+
+
+    public void addSports(SportField newSport){
+        allSports.add(newSport);
+    }
+
+    @Override
+    public Iterator<SportField> iterator() {
+        return allSports.iterator();
+    }
+
+
+
+    public SportField findFieldByCoord(LatLng Coord){
+        Iterator<SportField> it = allSports.iterator();
+        SportField finalSport = new SportField();
+        SportField interSport = new SportField();
+        while(it.hasNext()){
+            interSport = it.next();
+            if(interSport.getCoord().equals(Coord)){
+                finalSport = interSport;
+            }
+
+
+        }
+        return finalSport;
+    }
+}

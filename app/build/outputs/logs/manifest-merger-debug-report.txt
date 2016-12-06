@@ -76,38 +76,38 @@ ADDED from C:\Users\enguerran\Documents\TP-Git\projet604\app\src\main\AndroidMan
 		ADDED from C:\Users\enguerran\Documents\TP-Git\projet604\app\src\main\AndroidManifest.xml:16:13-52
 	android:name
 		ADDED from C:\Users\enguerran\Documents\TP-Git\projet604\app\src\main\AndroidManifest.xml:15:13-58
-activity#projet.Interface
+activity#projet.application.MenuActivity
 ADDED from C:\Users\enguerran\Documents\TP-Git\projet604\app\src\main\AndroidManifest.xml:18:9-22:20
 	android:label
 		ADDED from C:\Users\enguerran\Documents\TP-Git\projet604\app\src\main\AndroidManifest.xml:20:13-45
 	android:theme
 		ADDED from C:\Users\enguerran\Documents\TP-Git\projet604\app\src\main\AndroidManifest.xml:21:13-56
 	android:name
-		ADDED from C:\Users\enguerran\Documents\TP-Git\projet604\app\src\main\AndroidManifest.xml:19:13-44
-activity#projet.Creation
+		ADDED from C:\Users\enguerran\Documents\TP-Git\projet604\app\src\main\AndroidManifest.xml:19:13-59
+activity#projet.application.CreationEvenementActivity
 ADDED from C:\Users\enguerran\Documents\TP-Git\projet604\app\src\main\AndroidManifest.xml:23:9-26:59
 	android:label
 		ADDED from C:\Users\enguerran\Documents\TP-Git\projet604\app\src\main\AndroidManifest.xml:25:13-60
 	android:theme
 		ADDED from C:\Users\enguerran\Documents\TP-Git\projet604\app\src\main\AndroidManifest.xml:26:13-56
 	android:name
-		ADDED from C:\Users\enguerran\Documents\TP-Git\projet604\app\src\main\AndroidManifest.xml:24:13-43
-activity#projet.utilisateur.Profil
+		ADDED from C:\Users\enguerran\Documents\TP-Git\projet604\app\src\main\AndroidManifest.xml:24:13-72
+activity#projet.utilisateur.ProfilActivity
 ADDED from C:\Users\enguerran\Documents\TP-Git\projet604\app\src\main\AndroidManifest.xml:27:9-30:59
 	android:label
 		ADDED from C:\Users\enguerran\Documents\TP-Git\projet604\app\src\main\AndroidManifest.xml:29:13-58
 	android:theme
 		ADDED from C:\Users\enguerran\Documents\TP-Git\projet604\app\src\main\AndroidManifest.xml:30:13-56
 	android:name
-		ADDED from C:\Users\enguerran\Documents\TP-Git\projet604\app\src\main\AndroidManifest.xml:28:13-53
-activity#projet.utilisateur.Connexion
+		ADDED from C:\Users\enguerran\Documents\TP-Git\projet604\app\src\main\AndroidManifest.xml:28:13-61
+activity#projet.utilisateur.ConnexionActivity
 ADDED from C:\Users\enguerran\Documents\TP-Git\projet604\app\src\main\AndroidManifest.xml:31:9-40:20
 	android:label
 		ADDED from C:\Users\enguerran\Documents\TP-Git\projet604\app\src\main\AndroidManifest.xml:33:13-45
 	android:theme
 		ADDED from C:\Users\enguerran\Documents\TP-Git\projet604\app\src\main\AndroidManifest.xml:34:13-56
 	android:name
-		ADDED from C:\Users\enguerran\Documents\TP-Git\projet604\app\src\main\AndroidManifest.xml:32:13-56
+		ADDED from C:\Users\enguerran\Documents\TP-Git\projet604\app\src\main\AndroidManifest.xml:32:13-64
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
 ADDED from C:\Users\enguerran\Documents\TP-Git\projet604\app\src\main\AndroidManifest.xml:35:13-39:29
 action#android.intent.action.MAIN
@@ -118,40 +118,40 @@ category#android.intent.category.LAUNCHER
 ADDED from C:\Users\enguerran\Documents\TP-Git\projet604\app\src\main\AndroidManifest.xml:38:17-77
 	android:name
 		ADDED from C:\Users\enguerran\Documents\TP-Git\projet604\app\src\main\AndroidManifest.xml:38:27-74
-activity#projet.parametre_utilisateur
+activity#projet.utilisateur.ParametreUtilisateur
 ADDED from C:\Users\enguerran\Documents\TP-Git\projet604\app\src\main\AndroidManifest.xml:41:9-44:59
 	android:label
 		ADDED from C:\Users\enguerran\Documents\TP-Git\projet604\app\src\main\AndroidManifest.xml:43:13-73
 	android:theme
 		ADDED from C:\Users\enguerran\Documents\TP-Git\projet604\app\src\main\AndroidManifest.xml:44:13-56
 	android:name
-		ADDED from C:\Users\enguerran\Documents\TP-Git\projet604\app\src\main\AndroidManifest.xml:42:13-56
-activity#projet.utilisateur.Signup
+		ADDED from C:\Users\enguerran\Documents\TP-Git\projet604\app\src\main\AndroidManifest.xml:42:13-67
+activity#projet.utilisateur.InscriptionActivity
 ADDED from C:\Users\enguerran\Documents\TP-Git\projet604\app\src\main\AndroidManifest.xml:45:9-48:59
 	android:label
 		ADDED from C:\Users\enguerran\Documents\TP-Git\projet604\app\src\main\AndroidManifest.xml:47:13-58
 	android:theme
 		ADDED from C:\Users\enguerran\Documents\TP-Git\projet604\app\src\main\AndroidManifest.xml:48:13-56
 	android:name
-		ADDED from C:\Users\enguerran\Documents\TP-Git\projet604\app\src\main\AndroidManifest.xml:46:13-53
-activity#projet.MapsActivity
+		ADDED from C:\Users\enguerran\Documents\TP-Git\projet604\app\src\main\AndroidManifest.xml:46:13-66
+activity#projet.carte.CarteActivity
 ADDED from C:\Users\enguerran\Documents\TP-Git\projet604\app\src\main\AndroidManifest.xml:49:9-52:20
 	android:label
 		ADDED from C:\Users\enguerran\Documents\TP-Git\projet604\app\src\main\AndroidManifest.xml:51:13-56
 	android:name
-		ADDED from C:\Users\enguerran\Documents\TP-Git\projet604\app\src\main\AndroidManifest.xml:50:13-47
-activity#projet.MapsActivityCreation
+		ADDED from C:\Users\enguerran\Documents\TP-Git\projet604\app\src\main\AndroidManifest.xml:50:13-54
+activity#projet.carte.CarteCreationActivity
 ADDED from C:\Users\enguerran\Documents\TP-Git\projet604\app\src\main\AndroidManifest.xml:53:9-56:20
 	android:label
 		ADDED from C:\Users\enguerran\Documents\TP-Git\projet604\app\src\main\AndroidManifest.xml:55:13-56
 	android:name
-		ADDED from C:\Users\enguerran\Documents\TP-Git\projet604\app\src\main\AndroidManifest.xml:54:13-55
-service#projet.EvenementService
+		ADDED from C:\Users\enguerran\Documents\TP-Git\projet604\app\src\main\AndroidManifest.xml:54:13-62
+service#projet.application.EvenementService
 ADDED from C:\Users\enguerran\Documents\TP-Git\projet604\app\src\main\AndroidManifest.xml:58:9-61:19
 	android:exported
 		ADDED from C:\Users\enguerran\Documents\TP-Git\projet604\app\src\main\AndroidManifest.xml:60:13-37
 	android:name
-		ADDED from C:\Users\enguerran\Documents\TP-Git\projet604\app\src\main\AndroidManifest.xml:59:13-51
+		ADDED from C:\Users\enguerran\Documents\TP-Git\projet604\app\src\main\AndroidManifest.xml:59:13-63
 uses-sdk
 INJECTED from C:\Users\enguerran\Documents\TP-Git\projet604\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:design:23.1.1] C:\Users\enguerran\Documents\TP-Git\projet604\app\build\intermediates\exploded-aar\com.android.support\design\23.1.1\AndroidManifest.xml:20:5-43
