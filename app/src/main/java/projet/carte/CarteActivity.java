@@ -96,9 +96,16 @@ public class CarteActivity extends FragmentActivity implements OnMapReadyCallbac
             // for ActivityCompat#requestPermissions for more details.
             return;
         }
-        locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, MIN_TIME, MIN_DISTANCE, this); //You can also use LocationManager.GPS_PROVIDER and LocationManager.PASSIVE_PROVIDER
+        
+        // Vérification des Providers disponibles
+        if(locationManager.getAllProviders().contains(LocationManager.NETWORK_PROVIDER)) {
+          locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, MIN_TIME, MIN_DISTANCE, this);
+        } else if(locationManager.getAllProviders().contains(LocationManager.GPS_PROVIDER)) {
+          locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, MIN_TIME, MIN_DISTANCE, this);
+        } else if(locationManager.getAllProviders().contains(LocationManager.PASSIVE_PROVIDER)) {
+          locationManager.requestLocationUpdates(LocationManager.PASSIVE_PROVIDER, MIN_TIME, MIN_DISTANCE, this);
+        }
     }
-
 
 
     class MyTimerTask extends TimerTask {
@@ -142,7 +149,15 @@ public class CarteActivity extends FragmentActivity implements OnMapReadyCallbac
     public void onMapReady(GoogleMap googleMap) {
        // SportEvent intermUserEvent;
         mMap = googleMap;
+        
+        LatLng coords = new LatLng(21, 57);
+        
+        mMap.addMarker(new MarkerOptions()
+              .position(coords)
+              .title("Un marqueur"));
 
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(coords));
+        
         // Setting a custom info window adapter for the google map
         googleMap.setInfoWindowAdapter(new InfoWindowAdapter() {
 
